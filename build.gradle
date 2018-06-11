@@ -1,0 +1,84 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.2.41'
+
+    ext.kotlin_version = '1.2.31'
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    ext {
+        androidVersionCode = 1
+        androidVersionName = "1.0"
+        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+    }
+}
+
+ext {
+    // Android
+    androidMinSdkVersion = 21
+    androidTargetSdkVersion = 27
+    androidCompileSdkVersion = 27
+    androidSupportVersion = "27.1.1"
+    androidDataBindingVersion = "3.0.1"
+    androidAnnotationVersion = "24.2.0"
+
+    constraintLayoutVersion = "1.1.0"
+
+    // Dagger
+    daggerVersion = "2.15"
+
+    // Network
+    gsonVersion = "2.8.0"
+    retrofitVersion = "2.4.0"
+    okhttplogLibrary = "3.6.0"
+
+    // Rx
+    rxJavaVersion = "2.1.6"
+    rxAndroidVersion = "2.0.2"
+
+    // Libs
+    javaxAnnotationVersion = "1.0"
+    javaxInjectVersion = "1"
+
+    // Testing
+    jUnitVersion = "4.12"
+    testRunner = "1.0.2"
+    espressoVersion = "3.0.2"
+    assertJVersion = "1.7.1"
+    mockitoVersion = "2.10.0"
+    testingSupportLibVersion = "0.1"
+    robolectricVersion = "3.1.1"
+
+    // Debug
+    leakcanary = "1.5.4"
+    stetho = "1.5.0"
+    stethoOkhttp3 = "1.5.0"
+
+    // Logging
+    timber = "4.7.0"
+
+    // Glide
+    glideVersion = "4.6.1"
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

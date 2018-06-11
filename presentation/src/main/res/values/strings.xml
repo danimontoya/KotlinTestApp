@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">KotlinTestApp</string>
+
+    <!--Main Screen-->
+    <string name="screen_title">Kotlin</string>
+    <string name="screen_subtitle">StarWars Characters</string>
+    <string name="menu_sort_by_name">Sort by name</string>
+    <string name="menu_sort_by_birth_year">Sort by birth year</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_search_hint">Type character name</string>
+    <string name="menu_favorites">Favorites</string>
+    <string name="menu_show_all">Show All</string>
+
+</resources>
