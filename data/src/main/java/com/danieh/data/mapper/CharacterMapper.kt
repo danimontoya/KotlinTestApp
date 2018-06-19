@@ -14,8 +14,10 @@ class CharacterMapper
 @Inject
 constructor() : Mapper<CharacterWS, CharacterModel>() {
 
-    private var UNKOWN = "unkown"
-    private var EMPTY = "--"
+    companion object {
+        var UNKOWN = "unkown"
+        var EMPTY = "--"
+    }
 
     override fun map(from: CharacterWS): CharacterModel {
 
