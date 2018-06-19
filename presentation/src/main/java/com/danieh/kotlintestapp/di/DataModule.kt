@@ -1,12 +1,12 @@
 package com.danieh.kotlintestapp.di
 
+import com.danieh.data.datasource.CharactersApi
 import com.danieh.data.datasource.NetworkDataSource
 import com.danieh.data.datasource.network.CharactersNetworkDataSource
 import com.danieh.data.repository.CharactersRepositoryImpl
 import com.danieh.domain.repository.CharactersRepository
 import dagger.Module
 import dagger.Provides
-import retrofit2.Retrofit
 import javax.inject.Singleton
 
 /**
@@ -23,7 +23,7 @@ class DataModule {
 
     @Provides
     @Singleton
-    internal fun provideNetworkDataSource(retrofit: Retrofit): NetworkDataSource {
-        return CharactersNetworkDataSource(retrofit)
+    internal fun provideCharactersNetworkDataSource(client: CharactersApi): NetworkDataSource {
+        return CharactersNetworkDataSource(client)
     }
 }

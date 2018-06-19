@@ -1,6 +1,7 @@
 package com.danieh.kotlintestapp.di
 
 import android.content.Context
+import com.danieh.data.datasource.CharactersApi
 import com.danieh.domain.BuildConfig
 import dagger.Module
 import dagger.Provides
@@ -90,4 +91,11 @@ class NetworkModule(private val context: Context, private val url: String, priva
 
         return client.build()
     }
+
+    @Provides
+    @Singleton
+    internal fun provideCharactersApi(retrofit: Retrofit): CharactersApi {
+        return retrofit.create(CharactersApi::class.java)
+    }
+
 }

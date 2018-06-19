@@ -14,9 +14,7 @@ import javax.inject.Singleton
 @Singleton
 class CharactersNetworkDataSource
 @Inject
-constructor(retrofit: Retrofit) : NetworkDataSource {
-
-    private val client: CharactersApi = retrofit.create(CharactersApi::class.java)
+constructor(private val client: CharactersApi) : NetworkDataSource {
 
     override fun getCharactersConfiguration(page: Int): Single<CharactersConfigurationWS> {
         return client.getCharacters(page)
