@@ -10,6 +10,10 @@ interface CharacterItemView {
 
     interface Listener {
         fun bindModel(@NonNull model: CharacterViewModel)
+
+        fun favoriteClick()
+
+        fun rootClick()
     }
 
     fun displayName(name: String)
