@@ -17,14 +17,9 @@ class MainPresenter
 @Inject
 constructor(private val view: MainView?, private val useCase: GetCharactersUseCase) : BasePresenter<MainView?>(WeakReference(view)) {
 
-    companion object {
-        val ITEMS_PER_PAGE = 10
-    }
-
     private val mapper = CharacterViewModelMapper()
 
     private var page = 1
-
     private var characters = mutableListOf<CharacterViewModel>()
 
     fun getCharacters() {
